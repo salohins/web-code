@@ -1,0 +1,35 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+@media (min-width: $breakpoint-xs) {
+    .row, .row-reverse {
+        display: flex;  
+        flex: 1;
+        position: relative;      
+        align-items: center;    
+        width: 100%; 
+
+        @if $testing == true {
+            border: 1px solid $row-color;
+
+            &::after {
+                @include debug-title('row', $row-color);
+                left: 0;
+            }
+        }        
+    }
+
+    .row:not(.static) {
+        flex-direction: column;    
+    }
+
+    .row-reverse:not(.static) {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+    .row, .row-reverse {
+        flex-direction: row !important;
+    }
+}

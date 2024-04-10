@@ -1,0 +1,121 @@
+// Global Variables
+
+$testing: false;
+$row-color: red;
+$column-color: blue;
+$section-color: green;
+
+// Colors
+$primary-color: #007bff; // Main primary color
+$secondary-color: #ffae00; // Secondary color
+$success-color: #28a745; // Success color
+$info-color: #17a2b8; // Info color
+$warning-color: #ffc107; // Warning color
+$danger-color: #dc3545; // Danger color
+$text-color: #212529; // Body text color
+$link-color: #007bff; // Link color
+$link-hover-color: #0056b3; // Link hover color
+$background-color: #f8f9fa; // Background color
+$border-color: #dee2e6; // Border color
+$white-color: #ffffff; // White color
+$black-color: #000000; // Black color
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// Font
+$body-font: Arial, sans-serif;
+$heading-font: 'Roboto', sans-serif;
+
+// Font Sizes
+$font-size-xs: 14px;
+$font-size-sm: 16px;
+$font-size-md: 17px;
+$font-size-lg: 30px;
+$font-size-xl: 60px;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Typography
+$font-family: Arial, sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+$heading-font-family: $font-family;
+$heading-font-weight: bold;
+
+// Spacing
+$spacing-unit: 1rem;
+
+// Margins
+$margin-top: $spacing-unit;
+$margin-right: $spacing-unit;
+$margin-bottom: $spacing-unit;
+$margin-left: $spacing-unit;
+
+$margin-xs: 5px;
+$margin-sm: 10px;
+$margin-md: 20px;
+$margin-lg: 30px;
+$margin-xl: 40px;
+
+// Padding
+$padding-top: $spacing-unit;
+$padding-right: $spacing-unit;
+$padding-bottom: $spacing-unit;
+$padding-left: $spacing-unit;
+
+$padding-xs: 5px;
+$padding-sm: 10px;
+$padding-md: 20px;
+$padding-lg: 30px;
+$padding-xl: 40px;
+
+// Borders and Box Shadows
+$border-radius: 0.5rem;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+// Transitions and Animations
+$transition-duration: 0.3s;
+$transition-timing-function: ease;
+
+// Z-Index
+$zindex-modal: 1050;
+$zindex-tooltip: 1060;
+$zindex-max: 999;
+
+// Forms
+$input-padding: 0.375rem 0.75rem;
+$input-border-radius: 0.25rem;
+$input-border-width: 1px;
+$input-border-color: #ced4da;
+$input-focus-border-color: #80bdff;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+
+// Miscellaneous
+$container-max-width: 1140px;
+
+$section-min-height: auto;
+$section-padding: 10vh;
+
+:export {
+    breakpoint_sm: #{$breakpoint-sm};
+    primary_color: #{$primary-color};
+    secondary_color: #{$secondary-color};
+    info_color: #{$info-color};
+    warning_color: #{$warning-color};
+    danger_color: #{$danger-color};
+    text_color: #{$text-color};
+    link_color: #{$link-color};
+    background_color: #{$background-color};
+    border_color: #{$border-color};
+    white_color: #{$white-color};
+    black_color: #{$black-color};       
+}

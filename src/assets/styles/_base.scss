@@ -1,0 +1,130 @@
+@import './variables';
+@import './mixins';
+@import './navbar';
+@import './footer';
+
+
+// Your base styles here
+
+@media (min-width: $breakpoint-xs) {
+    .App {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    body,
+    html {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;        
+        font-family: $body-font;
+
+        margin: 0;
+        padding: 0;
+
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        background: $background-color;
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            z-index: 1;
+        }
+
+        #top-space {
+            padding: $mobile-vertical-padding;
+
+            &::after {
+                content: '';
+                display: block;
+                margin: 0;
+                padding: 0;
+                height: $logo-mobile-height;
+            }
+        }
+
+        #footer-container {            
+            display: flex;
+            align-items: flex-end;
+        }
+
+       
+
+        img {
+            pointer-events: none;
+        }
+
+        .link {            
+            cursor: pointer;
+            opacity: .8;
+
+            @include underline-default();
+            text-decoration: underline 0.1em #00000000;
+
+            &:hover {
+                opacity: 1;
+
+                text-underline-offset: 0.3em;
+                transition: all .2s;                                
+            }
+        }
+
+        hr {
+            border: 1px solid white;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: $font-size-xl;
+        }
+
+        h2 {
+            font-size: $font-size-lg;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p, input {
+            margin: 10px 0;
+            font-size: $font-size-sm;
+        }
+
+        p {
+            line-height: 30px;
+        }
+
+        span, label, a {
+            font-size: $font-size-md;
+        }
+
+        form {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+    body {
+        #top-space {
+            padding: $desktop-vertical-padding !important;
+
+            &::after {
+                content: '';
+                display: block;
+                height: $logo-desktop-height !important;
+            }
+        }
+    }
+}

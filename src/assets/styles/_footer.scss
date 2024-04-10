@@ -1,0 +1,81 @@
+// Footer styles
+$footer-color: $primary-color;
+
+$desktop-top-padding: 5vh;
+$mobile-top-padding: 5vh;
+
+$logo-desktop-height: 5vh;
+$logo-mobile-height: 5vh;
+
+@media (min-width: $breakpoint-xs) {
+    footer {
+        padding-top: $mobile-top-padding;
+        width: 100%;
+        background-color: $footer-color;
+        padding-bottom: 3vh;
+
+        hr {
+            @include dynamic-border-color($footer-color);
+            opacity: .2;
+            margin: 10px 0;
+            margin-top: 3vh;
+        }
+
+        h4,
+        span {
+            @include dynamic-text-color($footer-color)
+        }
+
+        li {
+            margin: 5px 0;            
+        }
+
+        .link {
+            @include dynamic-text-color($footer-color);
+            &:hover {              
+                @include dynamic-text-color($footer-color);  
+                @include dynamic-text-decoration-color($footer-color);
+            }
+        }
+
+        #footer-logo {
+            height: $logo-mobile-height;
+            margin-bottom: 3vh;
+            cursor: pointer;
+
+        }
+
+        .social-icons, #contact-icon {
+            @include dynamic-invert($footer-color);
+        }
+
+        .social-icons {
+            width: 50%;
+            margin-top: 2vh;
+            margin-bottom: 3vh;                  
+        }
+
+        #contact-icon {
+            margin-right: 10px;
+            transform: translateY(-1px);
+        }
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+    footer {
+        padding-top: $desktop-top-padding;
+        padding-bottom: 3vh;
+
+        #footer-logo {
+            height: $logo-desktop-height;
+
+
+        }
+
+        .social-icons {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}

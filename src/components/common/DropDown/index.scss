@@ -1,0 +1,48 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+$list-padding: 20px;
+$list-item-padding: 10px;
+$list-border-radius: $border-radius;
+$list-shadow: $box-shadow;
+
+.dropdown {        
+    position: relative;  
+
+    .dropdown-down-icon {
+        margin-left: 10px;        
+    }
+      
+    button {
+        border: none;
+        padding: 0;
+        background: none;           
+        z-index: $zindex-max;
+        height: 50px;
+        
+        div {
+            margin-left: 10px;
+        }
+
+    }
+    
+    
+    ul {
+        position: absolute;
+        background-color: white;        
+        left: 50%;
+        top: 100%;        
+        transform: translate(-50%, 7%);   
+
+        border-radius: $list-border-radius;
+        padding: $list-padding;                
+        z-index: $zindex-max + 1;   
+        box-shadow: $list-shadow;
+        
+        li {
+            padding: $list-item-padding;            
+        }        
+    }
+}
+
+    

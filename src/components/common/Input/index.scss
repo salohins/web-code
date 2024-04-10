@@ -1,0 +1,98 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+textarea {
+    resize: none;
+}
+
+input, textarea, select {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: $input-padding;   
+    border-radius: $input-border-radius; 
+    border: $input-border-width solid $input-border-color;
+    outline: none;
+
+    &:focus {
+        border-color: $input-focus-border-color;
+        box-shadow: $input-focus-box-shadow;
+    }
+}
+
+label {
+    width: 100%;        
+    margin-bottom: 10px;
+}
+
+.input {
+    padding: 7px 0;
+    
+}
+
+.radio {
+    margin-top: 10px;
+
+    div {
+        cursor: pointer;
+
+        height: 20px;
+        width: 20px;
+
+        border: $input-border-width solid $input-border-color;
+        border-radius: 50%;  
+
+        position: relative;
+                
+        &[data-ison="true"] {
+            &::after {
+                content: '';    
+                display: block;
+                height: 11px;
+                width: 11px;
+                position: absolute;
+                background-color: $secondary-color;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+            }
+        }             
+       
+    }
+    
+
+    span {
+        margin-left: 10px;
+        display: block;
+    }    
+}
+
+input[type='range'] {
+    -webkit-appearance: none;            
+    padding: 0;
+    margin: 10px 0;
+    height: 6px;
+    background-color: black;
+    border: none !important;
+    border-radius: 30px;
+    outline: none;    
+
+    &::-webkit-slider-thumb {
+        position: relative;
+        z-index: 10;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: $primary-color;  
+        border: 3px solid white;
+        border-radius: 15px;        
+        cursor: pointer;
+    }
+}
+
+input[type='number'] {
+    width: 50px !important;            
+    padding: 5px;
+    margin-right: 10px;
+}

@@ -1,0 +1,16 @@
+$header-height: 50vh;
+
+// Header styles
+
+@media (min-width: $breakpoint-xs) {
+    #header {
+        height: $header-height;        
+        display: flex;
+        flex-direction: column;                          
+    }
+
+}
+
+@media (min-width: $breakpoint-sm) {
+   
+}

@@ -1,0 +1,38 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+$accordion-default-color: $primary-color;
+
+@media (min-width: $breakpoint-xs) {
+    .accordion-heading {        
+        width: 100%;        
+        cursor: pointer;
+        background-color: red;
+        padding: 1rem;
+        box-sizing: border-box;
+        margin: 4px 0;
+        background-color: $accordion-default-color;
+        border-radius: $border-radius;
+
+        @include dynamic-text-color($accordion-default-color);
+
+    }                
+
+    .accordion-content {
+        width: 100%;
+    }
+
+    .accordion-down-icon {
+        margin-left: 20px;      
+        
+        path {
+            @include dynamic-fill-color($accordion-default-color);             
+        }
+               
+    }
+
+}
+
+@media (min-width: $breakpoint-sm) {
+
+}

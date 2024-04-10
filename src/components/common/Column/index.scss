@@ -1,0 +1,21 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+.column {    
+    display: flex;    
+    position: relative;
+    flex-direction: column;           
+    align-self: stretch;
+
+    @if $testing == true {
+        border: 1px solid $column-color;
+
+        &::after {
+            @include debug-title('column', $column-color);
+            right: 0;
+
+        }
+    }
+}
+
+    

@@ -1,0 +1,23 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+.section {
+    display: flex;
+    flex: 1;
+    position: relative;
+    flex-direction: column;        
+    padding: $section-padding 0;        
+
+
+
+    @if $testing == true {
+        border: 1px solid $section-color;
+
+        &::after {
+            @include debug-title('section', $section-color);
+            left: 0;
+        }
+    }
+
+   
+}

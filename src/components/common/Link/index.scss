@@ -1,0 +1,9 @@
+@import '../../../assets/styles/variables';
+
+.link {
+    color: $link-color;
+
+    &:hover {
+        color: $link-hover-color;
+    }
+}

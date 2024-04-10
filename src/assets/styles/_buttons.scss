@@ -1,0 +1,36 @@
+// Button styles
+button {
+    cursor: pointer;
+    padding: 7px 20px;
+    box-sizing: border-box;
+    border-radius: $border-radius;
+    font-size: $font-size-md;
+
+    .button-icon {
+        margin-right: 10px;
+    }
+    
+    @include dynamic-text-color($secondary-color);
+}
+
+.button-primary, .button-secondary {
+    &:hover {
+        background-color: darken($secondary-color, 20%);
+        transition: all .3s;
+        
+    }
+}
+
+.button-primary {
+    border: none;
+    background-color: $secondary-color;
+    transition: all .3s;
+    
+
+   
+}
+
+.button-secondary {
+    border: 2px solid $secondary-color;
+    background: none;
+}

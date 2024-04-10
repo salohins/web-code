@@ -1,0 +1,35 @@
+@import '../../../../assets/styles/_variables';
+
+.radio-block, .radio-block-empty {    
+    background-color: lightgray;
+    margin: 5px 0;
+    padding: 20px;      
+    height: 50px;        
+}
+
+.radio-block {
+    cursor: pointer;
+    border-radius: $border-radius;
+}
+
+.radio-block-empty {
+    background: none;
+}
+
+.radio-block-selected {
+    background: $secondary-color !important;
+}
+
+@media (min-width: $breakpoint-xs) {
+    .radio-block-empty {
+        display: none;
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+    .radio-block-empty {
+        display: block;
+    }
+    
+    
+}

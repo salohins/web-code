@@ -1,0 +1,11 @@
+$gradient-1: (
+    "background1": "rgb(255,0,0)",
+    "background2": "-moz-linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%)",
+    "background3": "-webkit-linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%)",
+    "background4": "linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%)",
+    "filter": "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000',endColorstr='#00d4ff',GradientType=1)"
+);
+
+:export {
+    g_1: #{$gradient-1};
+}

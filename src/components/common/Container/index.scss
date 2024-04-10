@@ -1,0 +1,67 @@
+@import '../../../assets/styles/variables';
+
+@media (min-width: $breakpoint-xs) {
+    .container {                        
+        display: flex;
+        width: 100%;
+                     
+        
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+
+        .container-content {
+            width: 95%;                
+        }
+    }
+
+    #header .container {
+        height: 100%;
+    }
+}
+
+@media (min-width: $breakpoint-sm) {
+    .container {
+        .container-content {
+            width: 540px;
+        }
+        
+    }
+    
+    
+}
+
+@media (min-width: $breakpoint-md) {
+    .container {
+        .container-content {
+            width: 720px;
+        }
+        
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .container {
+        .container-content {
+            width: 960px;
+        }
+        
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    .container {
+        .container-content {
+            width: 1140px;
+        }        
+    }
+}
+
+@media (min-width: $breakpoint-xxl) {
+    .container {
+        .container-content {
+            width: 1400px;
+        }
+        
+    }
+}
